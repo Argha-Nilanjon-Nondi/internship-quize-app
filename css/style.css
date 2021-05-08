@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Farro', sans-serif;
 }
 
 
@@ -137,6 +138,8 @@
 }
 
 .quize-footer {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
     background-color: rgb(210, 212, 214);
     padding: 1.8rem;
 }
