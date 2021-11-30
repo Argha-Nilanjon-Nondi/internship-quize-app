@@ -34,7 +34,7 @@ function quize_agree_func() {
         <div class="quize-disagree">
             <input type="checkbox" id="0909" name="" value="0">
             <label for="0909"> Agree</label><br>
-            <button>Start Quize</button>
+            <button>Start Quiz</button>
         </div>
     </div></div>`;
 

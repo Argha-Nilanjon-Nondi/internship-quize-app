@@ -1,25 +1,25 @@
 let questions = {
     "1": {
 
-        question: "My question 1",
+        question: "What is the capital of Bangladesh",
 
         option: {
-            1: "Hello 1",
-            2: "Hello 2",
-            3: "Hello 3"
+            1: "Dhaka",
+            2: "Khulna",
+            3: "Rajshahi"
         },
 
-        correct: 2
+        correct: 1
     },
 
     "2": {
 
-        question: "My question 2",
+        question: "When Bangladesh become independent",
 
         option: {
-            1: "Hello 1",
-            2: "Hello 002",
-            3: "Hello 3"
+            1: "1969",
+            2: "1970",
+            3: "1971"
         },
 
         correct: 3
@@ -27,15 +27,15 @@ let questions = {
 
     "3": {
 
-        question: "My question 3",
+        question: "Which is the densely populated country",
 
         option: {
-            1: "Hello 1",
-            2: "Hello 2",
-            3: "Hello 3"
+            1: "Japan",
+            2: "Bangladesh",
+            3: "USA"
         },
 
-        correct: 1
+        correct: 2
     }
 }
 
@@ -156,9 +156,6 @@ function varify_answer() {
 
 }
 
-
-
-
 function create_questions() {
 
     let quize_question_hold = document.querySelector(".quize-question");
@@ -193,20 +190,36 @@ function create_questions() {
 
 create_questions();
 
-function make_question_unshow(except) {
-    let questions_all = document.querySelectorAll(".quize-header");
-    let questions_option = document.querySelectorAll(".quize-option");
+// function make_question_unshow(except) {
+//     let questions_all = document.querySelectorAll(".quize-header");
+//     let questions_option = document.querySelectorAll(".quize-option");
 
-    for (let i = 0; i < questions_option.length; i++) {
-        if (except == i) {
-            questions_all[i].style.display = "block";
-            questions_option[i].style.display = "block";
-        }
-        if (except != i) {
-            questions_all[i].style.display = "none";
-            questions_option[i].style.display = "none";
-        }
+//     for (let i = 0; i < questions_option.length; i++) {
+//         if (except == i) {
+//             questions_all[i].style.display = "block";
+//             questions_option[i].style.display = "block";
+//         }
+//         if (except != i) {
+//             questions_all[i].style.display = "none";
+//             questions_option[i].style.display = "none";
+//         }
+//     }
+// }
+
+function make_question_unshow(except) {
+  let questions_all = document.querySelectorAll(".quize-header");
+  let questions_option = document.querySelectorAll(".quize-option");
+
+      questions_all[except].style.display = "block";
+      questions_option[except].style.display = "block";
+
+      let previous_question=except-1;
+    
+    if (previous_question>0) {
+      questions_all[previous_question].style.display = "none";
+      questions_option[previous_question].style.display = "none";
     }
+  
 }
 
 function show_correct(exc) {
@@ -275,10 +288,4 @@ quize_slide_next.addEventListener("click", function() {
 });
 if (question_position == 0) {
     quize_slide_pre.style.display = "none";
-
 }
-
-
-quize_slide_next.addEventListener("click", function() {
-
-});
