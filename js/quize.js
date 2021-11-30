@@ -190,37 +190,22 @@ function create_questions() {
 
 create_questions();
 
-// function make_question_unshow(except) {
-//     let questions_all = document.querySelectorAll(".quize-header");
-//     let questions_option = document.querySelectorAll(".quize-option");
-
-//     for (let i = 0; i < questions_option.length; i++) {
-//         if (except == i) {
-//             questions_all[i].style.display = "block";
-//             questions_option[i].style.display = "block";
-//         }
-//         if (except != i) {
-//             questions_all[i].style.display = "none";
-//             questions_option[i].style.display = "none";
-//         }
-//     }
-// }
-
 function make_question_unshow(except) {
-  let questions_all = document.querySelectorAll(".quize-header");
-  let questions_option = document.querySelectorAll(".quize-option");
+    let questions_all = document.querySelectorAll(".quize-header");
+    let questions_option = document.querySelectorAll(".quize-option");
 
-      questions_all[except].style.display = "block";
-      questions_option[except].style.display = "block";
-
-      let previous_question=except-1;
-    
-    if (previous_question>=0) {
-      questions_all[previous_question].style.display = "none";
-      questions_option[previous_question].style.display = "none";
+    for (let i = 0; i < questions_option.length; i++) {
+        if (except == i) {
+            questions_all[i].style.display = "block";
+            questions_option[i].style.display = "block";
+        }
+        if (except != i) {
+            questions_all[i].style.display = "none";
+            questions_option[i].style.display = "none";
+        }
     }
-  
 }
+
 
 function show_correct(exc) {
     let questions_correct = document.querySelectorAll(".quize-correct");
