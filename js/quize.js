@@ -163,7 +163,7 @@ function create_questions() {
     var uid = 0;
     for (ques in questions) {
         let question_text = questions[ques].question;
-        html_code += ` <div class="quize-header" ques=${uid}>Q${ques}.${question_text}</div>
+        html_code += ` <div class="quize-header" ques=${uid}>Q${ques}.${question_text} ?</div>
     <div class="quize-option" ques="${ques}">
         <ul>`
 
