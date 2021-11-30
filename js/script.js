@@ -39,7 +39,8 @@ function quize_agree_func() {
     </div></div>`;
 
     let js_agree = document.createElement("script");
-    js_agree.src = "/js/agree.js";
+    js_agree.src =
+      "https://argha-nilanjon-nondi.github.io/internship-quize-app/js/agree.js";
     document.body.appendChild(js_agree);
 
 }
