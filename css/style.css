@@ -294,6 +294,9 @@
 /*responsuve start*/
 
 @media screen and (max-width:694px) {
+    html{
+        font-size: 13px;
+    }
     .header {
         display: flex;
         flex-direction: column;
