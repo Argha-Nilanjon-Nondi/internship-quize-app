@@ -15,7 +15,7 @@ function quize_start_func() {
 
 
     let js_quize = document.createElement("script");
-    js_quize.src = "/js/quize.js";
+    js_quize.src = "js/quize.js";
     document.body.appendChild(js_quize);
 }
 let quize_start0001 = document.querySelector(".quize-footer button");
