@@ -215,7 +215,7 @@ function make_question_unshow(except) {
 
       let previous_question=except-1;
     
-    if (previous_question>0) {
+    if (previous_question>=0) {
       questions_all[previous_question].style.display = "none";
       questions_option[previous_question].style.display = "none";
     }
