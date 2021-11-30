@@ -243,7 +243,7 @@ let question_position = 0;
 
 
 
-make_question_unshow(except = 0);
+make_question_unshow((except = question_position));
 let quize_slide_pre = document.getElementById("quize-slide-pre");
 let quize_slide_next = document.getElementById("quize-slide-next");
 quize_slide_pre.addEventListener("click", function() {
@@ -251,6 +251,7 @@ quize_slide_pre.addEventListener("click", function() {
         quize_slide_pre.style.display = "none";
         quize_slide_next.style.display = "block";
         quize_slide_next.innerText = "Next";
+        question_position--;
         make_question_unshow(question_position);
 
     } else {
