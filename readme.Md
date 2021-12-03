@@ -1,7 +1,7 @@
 
-# Quize app
+# Quiz app
 
-It is a simple quize app which I built in my frontend internship.
+It is a simple quiz app which I built in my frontend internship.
 
 
 ## Features
